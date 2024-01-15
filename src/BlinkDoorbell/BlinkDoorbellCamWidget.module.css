@@ -1,0 +1,65 @@
+/* BlinkDoorbellCamWidget.module.css */
+
+/* Widget container */
+.widgetContainer {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Widget title */
+  .widgetTitle {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Icon */
+  .icon {
+    max-width: 50px; /* Adjust the max-width for the image */
+    height: auto; /* Automatically adjust the height */
+    margin-bottom: 20px;
+  }
+  
+  /* Input field for 2FA key */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  /* Submit button for 2FA key */
+  button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  /* Loading spinner */
+  .CircularProgress {
+    margin-top: 20px;
+  }
+  
+  /* Dark mode */
+  .darkMode {
+    background-color: #333;
+    color: #fff;
+  }
+  

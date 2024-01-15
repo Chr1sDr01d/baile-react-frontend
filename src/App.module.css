@@ -1,0 +1,97 @@
+/* App.module.css */
+
+/* Header */
+.appHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 20px;
+  /* Add more styling as needed */
+}
+
+/* Container for all widgets */
+.widgetsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align items to the start */
+  gap: 20px; /* Space between widgets */
+  padding: 5px;
+}
+
+/* Individual widget styling */
+.widgetContainer {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px; /* Adjust margin as needed */
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 400px;
+  min-width: 300px; /* Minimum width of each widget */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Widget title */
+.widgetTitle {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Widget image */
+.widgetImage {
+  max-width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Control panel and card content */
+.controlPanel,
+.cardContent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* Button styling */
+.button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+/* Button hover effect */
+.button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark mode */
+.darkMode {
+  background-color: #333; /* Dark background for dark mode */
+  color: #fff; /* Light text for dark mode */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  /* Adjustments for widget containers and grids */
+  .widgetContainer {
+    width: 90%;
+  }
+
+  .controlPanel,
+  .cardContent {
+    grid-template-columns: 1fr;
+  }
+}

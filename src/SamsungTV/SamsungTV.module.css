@@ -1,0 +1,68 @@
+/* SamsungTV.module.css */
+
+/* New class names to avoid conflicts */
+.samsung-widget-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px; /* Adjust margin as needed */
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+    min-width: 300px; /* Minimum width of each widget */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+/* New class names for elements */
+.samsung-widget-title {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+  
+.samsung-widget-image {
+    width: 50px;;
+    height: auto;
+    margin-bottom: 20px;
+}
+  
+.samsung-control-panel,
+.samsung-card-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+.samsung-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+  
+.samsung-button:hover {
+    background-color: #0056b3;
+}
+  
+.samsung-dark-mode {
+    background-color: #333; /* Dark background for dark mode */
+    color: #fff; /* Light text for dark mode */
+}
+.volume-playback-controls, .app-launch-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+  
+.app-launch-buttons button {
+    margin: 0 5px;
+}
