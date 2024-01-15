@@ -7,12 +7,14 @@ import GoveeFloorLamp from './GoveeFloorLamp/GoveeFloorLamp';
 import GoveeHeaterWidget from './GoveeHeaters/GoveeHeaterWidget';
 import { CustomThemeProvider } from './darkmode/ThemeContext';
 import DarkModeToggle from './darkmode/DarkModeToggle';
-import GoveeWteHeaterWidget from './GoveeWteHeater/GoveeWteHeaterWidget';
 import BlinkDoorbellCamWidget from './BlinkDoorbell/BlinkDoorbellCamWidget';
 import styles from '../src/App.module.css';
-const BLK_HEATER = '60:74:F4:6E:B7:C4';
+import blkHeaterIcon from '../src/assets/icons/Blk_Heater.png';
+import wteHeaterIcon from '../src/assets/icons/Wte_Heater.png'; // Assuming you have a
+
+const BLK_HEATER = '1D:C0:60:74:F4:6E:B7:C4';
 const HEATER_MODEL= 'H7130';
-const WTE_HEATER='60:74:F4:58:56:42';
+const WTE_HEATER='1D:C8:60:74:F4:58:56:42';
 
 function App() {
   return (
@@ -47,8 +49,19 @@ function Home() {
 
         <section className="home-appliances">
           <h2>Home Appliances 🏠</h2>
-          <GoveeHeaterWidget device={BLK_HEATER} model={HEATER_MODEL}/>
-          <GoveeWteHeaterWidget device={WTE_HEATER} model={HEATER_MODEL}/>
+          <GoveeHeaterWidget 
+          device={BLK_HEATER} 
+          model={HEATER_MODEL}
+          icon={blkHeaterIcon}
+          heaterName="Govee Black Heater"
+          />
+          <GoveeHeaterWidget 
+            device={WTE_HEATER} 
+            model={HEATER_MODEL} 
+            icon={wteHeaterIcon} 
+            heaterName="Govee White Heater"
+          />
+          
         </section>
 {/*
         <section className="lights">

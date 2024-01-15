@@ -11,11 +11,13 @@ import { useTheme } from '../../src/darkmode/ThemeContext';
 import commonStyles from '../../src/CommonWidgetStyles.module.css'
 import tvWidgetIcon from '../../src/assets/icons/samsung-tv.png';
 import netflixIconDark from '../../src/assets/icons/netflix-black-bg.png';
-import netflixIconLight from '../../src/assets/icons/netflix-white-bg.png';
-import primeVideoIconDark from '../../src/assets/icons/prime-black-bg.png';
-import primeVideoIconLight from '../../src/assets/icons/prime-white-bg.png';
-import youtubeIconDark from '../../src/assets/icons/youtube-black-bg-2.png';
-import youtubeIconLight from '../../src/assets/icons/youtube-white-bg-2.png';
+import netflixIconLight from '../assets/icons/netflix-white-bg.png';
+import primeVideoIconDark from '../assets/icons/prime-black-bg.png';
+import primeVideoIconLight from '../assets/icons/prime-white-bg.png';
+import youtubeIconDark from '../assets/icons/youtube-black-bg-2.png';
+import youtubeIconLight from '../assets/icons/youtube-white-bg-2.png';
+import disneyIconLight from '../assets/icons/disney-light.png';
+import disneyIconDark from '../assets/icons/disney-dark.png';
 
 
 const SamsungTV = () => {
@@ -72,8 +74,8 @@ const SamsungTV = () => {
 
   return (
     <div className={`${commonStyles['widget-container']} ${darkMode ? commonStyles['dark-mode'] : ''}`}>
-      <h2 style={{ color: darkMode ? '#fff' : '#333' }}>Samsung TV Control 📺</h2>
       <img src={tvWidgetIcon} alt="Samsung TV" className={`${commonStyles['widget-image']}`} />
+      <h2 style={{ color: darkMode ? '#fff' : '#333' }}>Samsung TV Control 📺</h2>
       <FormControlLabel
         control={<Switch checked={power} onChange={togglePower} color="primary" disabled={isLoading} />}
         label={isLoading ? <CircularProgress size={20} /> : <FiberManualRecordIcon style={{ color: power ? 'green' : 'red' }} />}
@@ -99,6 +101,9 @@ const SamsungTV = () => {
           </Button>
           <Button onClick={() => launchApp("111299001912")}>
             <img src={darkMode ? youtubeIconDark : youtubeIconLight} alt="YouTube" style={{ height: '35px' }} />
+          </Button>
+          <Button onClick={() => launchApp("3201901017640")}>
+            <img src={darkMode ? disneyIconDark : disneyIconLight} alt="Disney+" style={{ height: '50px' }} />
           </Button>
         {/* Additional buttons for other functionalities can be added here */}
       </div>
