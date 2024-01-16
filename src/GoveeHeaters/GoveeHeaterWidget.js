@@ -6,7 +6,7 @@ import styles from '../CommonWidgetStyles.module.css';
 import blkHeaterIcon from '../assets/icons/Blk_Heater.png';
 import wteHeaterIcon from '../assets/icons/Wte_Heater.png';
 
-  const GoveeHeaterWidget = ({ device, model, icon}) => {
+  const GoveeHeaterWidget = ({ device, model, icon, heaterName}) => {
   const { darkMode } = useTheme();
   const [isLoading, setIsLoading] = useState(false);
   const flaskBaseUrl = 'http://localhost:5001';
@@ -30,8 +30,8 @@ import wteHeaterIcon from '../assets/icons/Wte_Heater.png';
 
   return (
     <div className={`${styles['widget-container']} ${darkMode ? styles['dark-mode'] : ''}`}>
-      <img src={heaterIcon} alt="Heater Icon" className={styles.icon} />
-      <h2 className={styles.widgetTitle}>Govee Heater</h2>
+      <img src={icon} alt="Heater Icon" className={styles.icon} />
+      <h2 className={styles.widgetTitle}>{heaterName}</h2>
       {isLoading ? <CircularProgress /> : (
         <div className={styles.controlPanel}>
           <Button onClick={() => sendHeaterCommand({ name: 'turn', value: 'on' })}>Power On</Button>

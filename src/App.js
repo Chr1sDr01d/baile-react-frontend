@@ -34,14 +34,6 @@ function Home() {
   return (
     <div>
       <div className={styles.widgetsContainer}>
-        <DarkModeToggle className={styles.darkModeToggle} 
-          style={{marginBottom: '20px'}} 
-          size="small" 
-          checkedIcon={<span>🌞</span>} 
-          uncheckedIcon={<span>🌙</span>} 
-          checkedColor="green" 
-          uncheckedColor="red" 
-         /> 
         <section className="media">
           <h2>Media 💻</h2>
           <SamsungTV />
@@ -78,6 +70,14 @@ function Home() {
   */}
         {/* Add more widgets or sections as needed */}
       </div>
+      <DarkModeToggle className={styles.darkModeToggle} 
+          style={{marginBottom: '5px'}} 
+          size="small"
+          checkedIcon={<span>🌞</span>} 
+          uncheckedIcon={<span>🌙</span>} 
+          checkedColor="green" 
+          uncheckedColor="red" 
+         /> 
     </div>
   );
 }
