@@ -55,14 +55,14 @@ function Home() {
           />
           
         </section>
-{/*
+        
         <section className="lights">
           <h2>Lights 💡 </h2>
           <GoveeTVLights />
           <GoveeLightBars />
           <GoveeFloorLamp />
         </section>
-
+{/*
         <section className="security">
           <h2>Security 🚨</h2>
           <BlinkDoorbellCamWidget />
@@ -71,7 +71,7 @@ function Home() {
         {/* Add more widgets or sections as needed */}
       </div>
       <DarkModeToggle className={styles.darkModeToggle} 
-          style={{marginBottom: '5px'}} 
+          style={{marginBottom: 'px'}} 
           size="small"
           checkedIcon={<span>🌞</span>} 
           uncheckedIcon={<span>🌙</span>} 

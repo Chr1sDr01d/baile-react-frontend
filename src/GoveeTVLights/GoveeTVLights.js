@@ -35,10 +35,8 @@ const GoveeTVLights = ({ deviceName, deviceMac, deviceModel, iconPath }) => {
     getTVLightsStatus();
   }, [deviceMac, deviceModel]);
 
-  // Function to send brightness commands to the TV lights via the Flask backend
   const sendBrightnessCommand = async (newValue) => {
     try {
-      // Replace '/api/govee-tv-lights-control' with your backend route
       const response = await axios.post(`/api/govee-tv-lights-control`, {
         deviceMac,
         deviceModel,
